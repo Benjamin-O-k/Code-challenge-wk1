@@ -1,11 +1,12 @@
 // calculates the gross salary.Basic and benefits values are required here
-let bSalary = function grossSalary(basic , benefits){
-    let gSalary = parseInt(basic) + parseInt(benefits);
-
+let bSalary = function grossSalary(){
+    let basic = parseInt(prompt('Enter your base salary'))
+    let benefits = parseInt(prompt('Enter your benefits'))
+    let gSalary = basic +benefits;
     return gSalary;
 }
 // test value of base salary
-let ksh = bSalary(1000 , 1000);
+let ksh = bSalary();
 function deductions(ksh){
     // tax deductions
     function tax(ksh){
@@ -95,11 +96,7 @@ function deductions(ksh){
 // calculating net salary after deductions.
 function nSalary(ksh){
     let net = ksh - deductions(ksh);
-    return net;
+    alert(`Your net salary is ${net}`);
 }
-
-//test values
-console.log(ksh)
-console.log(deductions(ksh));
-console.log(nSalary(ksh));
-
+//called functioin
+nSalary(ksh)

@@ -1,15 +1,17 @@
-function speed(speed){
+function speed(){
+    //gets input form the user
+    let speed = parseInt(prompt('Enter your speed'))
     if(speed <= 70){// checks regular speed limit
-        console.log("Ok")
+        alert("Ok")
     }else{
         //calculates demerits based on speed
         let demerit = Math.floor((speed - 70 )/ 5)
-        console.log(`You have ${demerit} demerit points.`);
+        alert(`You have ${demerit} demerit points.`);
         // a license suspension if demerit points exceeds 12
         if(demerit > 12){
-            console.log("License suspended")
+            alert("License suspended")
         }
     }
 }
-// test value
-speed(100)
+// calling the function
+speed()

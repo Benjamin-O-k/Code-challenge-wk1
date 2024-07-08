@@ -1,10 +1,10 @@
 //grades function requires a integer to be graded as per the instruction given.
-function grades(marks){
-    document.getElementById("demo").innerHTML = "Paragraph changed.";
-    marks = parseInt(marks)
+// prompting user for the marks
+let marks = prompt("Enter your marks");
+function grades(){
 // This is to ensure that the input is a relevant and required data type so as to avoid errors.
-    if(marks < 0 || marks > 100  || isNaN){
-        return 'Invalid input.Enter marks between 0 and 100'
+    if(marks < 0 || marks > 100 || marks == isNaN){
+        alert ('Invalid input.Enter marks between 0 and 100')
     }
     let grade = '';
 //the conditions for grading marks .
@@ -19,7 +19,7 @@ function grades(marks){
     } else {
         grade = "E";
     }
-    return grade;
+    alert (`You have a ${grade}`);
 }
-// test value
-console.log(grades(29)); //LOG: E
+//running the function
+grades()
